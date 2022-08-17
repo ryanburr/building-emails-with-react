@@ -1,6 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Building Emails with React
+
+## Background
+
+[MJML](https://mjml.io/)
+
+[mjml-react](https://github.com/wix-incubator/mjml-react)
+
+### Limitations
+
+`mjml` and `mjml-react` are meant to be run inside a node.
+
+If you want to compile `mjml` from within a browser, try out [mjml-browser](https://www.npmjs.com/package/mjml-browser).
+
+:warning: I'm not sure how `mjml-react` works with that library.
+
+
+## Setup
+
+### Install Deps
+
+```bash
+npm i mjml mjml-react
+```
+
+#### TypeScript
+
+```bash
+npm i -D @types/mjml-react
+```
+
+### Basic Structure
+
+```html
+<Mjml>
+  <!-- Root of every template -->
+  <MjmlHead>
+    <!-- Similar to <head> HTML tag -->
+  </MjmlHead>
+  <MjmlBody>
+    <!-- Similar o <body> HTML tag -->
+  </MjmlBody>
+</Mjml>
+```
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
