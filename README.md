@@ -2,9 +2,66 @@
 
 ## Background
 
-[MJML](https://mjml.io/)
+### Quick History Lesson
 
-[mjml-react](https://github.com/wix-incubator/mjml-react)
+- 1971: The first email ever sent on the ARPANET system, though it wasn't called "email" yet.
+- 1978: A computerized interoffice mail system was invented called, EMAIL.
+- 1992: Multipurpose Internet Mail Extension (MIME) made email much more flexible, supporting text in character sets other than ASCII.
+- 1996: Webmail clients starting to gain popularity, and with it came support for HTML in emails.
+- 2010: iPhone 4 is released and responsive emails become necessary.
+
+### HTML in Email
+
+Even with emails supporting HTML since 1996, there are still only a subset of HTML tags that are supported by email clients. The support for certain tags and attributes even varies from one email client to another.
+
+Check out [caniemail.com](https://www.caniemail.com/) to see what clients support which tags.
+
+With inconsistent support, making responsive emails becomes a challenge.
+
+### Making Emails Easy
+
+Created in 2015 by Mailjet, [MJML](https://mjml.io/) had one objective, to abstract away the complexity of responsive emails.
+
+MJML allows you to write high-level code with reusability and extensibility in mind.
+
+The MJML engine was actually built in React for its high composability.
+
+### Custom MJML Components
+
+Much like React, MJML allows you to create custom components. The syntax is very similar to writing class components in React, but the developer experience is not great. For example, the `render` has to be written as a string:
+
+```js
+  public render(): string {
+    return `
+      <span ${this.htmlAttributes({ style: 'bubble' })}>
+        ${this.getAttribute('number')}
+      </span>
+    `;
+  }
+```
+
+Even trying to render other MJML components in your custom component is not straight forward.
+
+```js
+  public render(): string {
+    return `
+      ${this.renderMJML(`
+        <mj-button 
+          href="${this.getAttribute('href')}"
+          border-radius="4px"
+        >
+          ${this.getContent()}
+        </mj-button>
+      `)}
+    `;
+  }
+```
+
+### MJML-React
+
+In 2018, MJML published the first version of [mjml-react](https://github.com/wix-incubator/mjml-react), an npm package that made it even easier to work with their components.
+
+
 
 ### Limitations
 
