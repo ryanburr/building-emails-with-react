@@ -7,12 +7,15 @@ const OUT_DIR = 'build/templates'
 
 async function main() {
   try {
-    console.log('Buildinng emails...');
-  
-    const output = render(Basic(), { validationLevel: 'soft' });
-  
-    await writeFileRecursive(path.join(OUT_DIR, '1.basic.html'), output.html);
-    
+    console.log("Building emails...");
+
+    console.log("Building 1.basic");
+    const basicOutput = render(Basic(), { validationLevel: "strict" });
+    await writeFileRecursive(
+      path.join(OUT_DIR, "1.basic.html"),
+      basicOutput.html
+    );
+
     console.log(`Emails built successfully to "${OUT_DIR}".`);
   
   } catch (err) {
