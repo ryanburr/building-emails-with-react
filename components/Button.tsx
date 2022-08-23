@@ -1,24 +1,10 @@
 import React from "react";
-import { MjmlButton } from "mjml-react";
-import { theme } from "../styles/theme";
 
-export interface ButtonProps extends React.PropsWithChildren {
-  href: string;
-  color?: string;
-}
+export interface ButtonProps extends React.PropsWithChildren {}
 
-export const Button = ({
-  children,
-  href,
-  color = theme.palette.secondary,
-}: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   return (
-    <MjmlButton
-      href={href}
-      backgroundColor={color}
-      color={theme.palette.common.white}
-    >
-      {children}
-    </MjmlButton>
+    // TODO: 2.b Write custom button component
+    <div />
   );
 };
