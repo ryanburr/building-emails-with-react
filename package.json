@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild:templates": "rm -rf build/templates",
+    "prebuild:templates": "rm -rf public/templates",
     "build:templates": "ts-node --project=tsconfig.mjml.json ./commands/build_templates.ts"
   },
   "dependencies": {

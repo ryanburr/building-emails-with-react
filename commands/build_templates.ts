@@ -4,7 +4,7 @@ import { Basic } from "../templates/1.basic";
 import { CustomComponent } from "../templates/2.custom-component";
 import { writeFileRecursive } from "../utils/writeFileRecursive";
 
-const OUT_DIR = "build/templates";
+const OUT_DIR = "public/templates";
 
 async function main() {
   try {
