@@ -2,6 +2,7 @@ import path from "path";
 import { render } from "mjml-react";
 import { Basic } from "../templates/1.basic";
 import { writeFileRecursive } from "../utils/writeFileRecursive";
+import { CustomComponent } from "../templates/2.custom-component";
 
 const OUT_DIR = "public/templates";
 
@@ -16,7 +17,14 @@ async function main() {
       basicOutput.html
     );
 
-    // TODO: 2.c Compile custom template
+    console.log("Building 2.custom-component");
+    const customOutput = render(CustomComponent(), {
+      validationLevel: "strict",
+    });
+    await writeFileRecursive(
+      path.join(OUT_DIR, "2.custom-component.html"),
+      customOutput.html
+    );
 
     // TODO: 3.a Compile full template
 
