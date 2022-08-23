@@ -7,7 +7,7 @@ export const CustomComponent = () => (
     <MjmlBody>
       <MjmlSection>
         <MjmlColumn>
-          <Button>Howdy!</Button>
+          <Button href={"https://github.com"}>Howdy!</Button>
         </MjmlColumn>
       </MjmlSection>
     </MjmlBody>
