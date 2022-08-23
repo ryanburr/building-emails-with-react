@@ -1,10 +1,14 @@
-import React from 'react';
-import { Mjml, MjmlBody, MjmlText } from 'mjml-react';
+import React from "react";
+import { Mjml, MjmlBody, MjmlColumn, MjmlSection, MjmlText } from "mjml-react";
 
 export const Basic = () => (
   <Mjml>
     <MjmlBody>
-      <MjmlText>Howdy!</MjmlText>
+      <MjmlSection>
+        <MjmlColumn>
+          <MjmlText>Howdy!</MjmlText>
+        </MjmlColumn>
+      </MjmlSection>
     </MjmlBody>
   </Mjml>
-)
+);
