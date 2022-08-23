@@ -24,7 +24,7 @@ Created in 2015 by Mailjet, [MJML](https://mjml.io/) had one objective, to abstr
 
 MJML allows you to write high-level code with reusability and extensibility in mind.
 
-The MJML engine was actually built in React for its high composability.
+The MJML engine is actually built in React for its high composability.
 
 ### Custom MJML Components
 
