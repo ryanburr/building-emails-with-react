@@ -46,7 +46,7 @@ Even trying to render other MJML components in your custom component is not stra
   public render(): string {
     return `
       ${this.renderMJML(`
-        <mj-button 
+        <mj-button
           href="${this.getAttribute('href')}"
           border-radius="4px"
         >
@@ -61,8 +61,6 @@ Even trying to render other MJML components in your custom component is not stra
 
 In 2018, MJML published the first version of [mjml-react](https://github.com/wix-incubator/mjml-react), an npm package that made it even easier to work with their components.
 
-
-
 ### Limitations
 
 `mjml` and `mjml-react` are meant to be run inside a node.
@@ -70,7 +68,6 @@ In 2018, MJML published the first version of [mjml-react](https://github.com/wix
 If you want to compile `mjml` from within a browser, try out [mjml-browser](https://www.npmjs.com/package/mjml-browser).
 
 :warning: I'm not sure how `mjml-react` works with that library.
-
 
 ## Setup
 
@@ -95,7 +92,7 @@ npm i -D @types/mjml-react
     <!-- Similar to <head> HTML tag -->
   </MjmlHead>
   <MjmlBody>
-    <!-- Similar o <body> HTML tag -->
+    <!-- Similar to <body> HTML tag -->
   </MjmlBody>
 </Mjml>
 ```
