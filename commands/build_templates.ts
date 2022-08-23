@@ -9,9 +9,8 @@ async function main() {
   try {
     console.log("Building emails...");
 
-    // TODO: 1.b switch to strict validation
     console.log("Building 1.basic");
-    const basicOutput = render(Basic(), { validationLevel: "soft" });
+    const basicOutput = render(Basic(), { validationLevel: "strict" });
     await writeFileRecursive(
       path.join(OUT_DIR, "1.basic.html"),
       basicOutput.html
