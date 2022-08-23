@@ -35,6 +35,14 @@ const Home: NextPage = () => {
               className={styles.template}
             />
           </div>
+          <div className={styles.card}>
+            <h3>Full Template</h3>
+            <iframe
+              id="full_template"
+              src="/templates/3.full-template.html"
+              className={styles.template}
+            />
+          </div>
         </div>
       </main>
     </div>
