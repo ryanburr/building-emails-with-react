@@ -4,13 +4,18 @@ import { theme } from "../styles/theme";
 
 export interface ButtonProps extends React.PropsWithChildren {
   href: string;
+  color?: string;
 }
 
-export const Button = ({ children, href }: ButtonProps) => {
+export const Button = ({
+  children,
+  href,
+  color = theme.palette.secondary,
+}: ButtonProps) => {
   return (
     <MjmlButton
       href={href}
-      backgroundColor={theme.palette.secondary}
+      backgroundColor={color}
       color={theme.palette.common.white}
     >
       {children}
